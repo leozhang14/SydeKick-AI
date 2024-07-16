@@ -1,27 +1,10 @@
-version: '3.8'
-
 services:
-  web:
-    build: ./app
+  app: 
+    build:
+      context: app
     ports:
-      - "5002:5002" # If you get a "bind: address already in use error", use another port - best practice is next available 1 - start with 5000
-    depends_on:
-      - postgres
-    environment:
-      - DATABASE_URL=postgresql://myuser:mypassword@postgres/mydatabase
-
-  postgres:
-    image: "postgres:13"
-    env_file:
-      - ./.env
-    environment:
-      - POSTGRES_USER=${POSTGRES_USER}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-      - POSTGRES_DB=${POSTGRES_DB}
-    ports:
-      - "5433:5433"
+      - 5002:5002
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - ./app:/app
 
-volumes:
-  pgdata:
+# ask leo for environment variables
