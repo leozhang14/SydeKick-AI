@@ -3,7 +3,7 @@ services:
     build:
       context: app
     ports:
-      - 5002:5002
+      - 3001:3001
     volumes:
       - ./app:/app
   pytorch_testing:
