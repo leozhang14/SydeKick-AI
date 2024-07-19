@@ -6,5 +6,3 @@ services:
       - 5002:5002
     volumes:
       - ./app:/app
-
-# ask leo for environment variables
