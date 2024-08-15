@@ -1,13 +1,9 @@
 services:
-  app: 
+  backend: 
     build:
-      context: app
+      context: backend
     ports:
       - 3001:3001
     volumes:
-      - ./app:/app
-  pytorch_testing:
-    build:
-      context: pytorch_testing
-    volumes:
-      - ./pytorch_testing:/pytorch_testing
+      - ./backend:/backend
+
