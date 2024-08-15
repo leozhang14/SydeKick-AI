@@ -7,11 +7,3 @@ services:
       - 5002:5002
     volumes:
       - ./backend:/backend
-  frontend: 
-    build:
-      context: frontend
-      dockerfile: Dockerfile
-    ports:
-      - 3001:3001
-    volumes:
-      - ./frontend
