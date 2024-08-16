@@ -4,6 +4,15 @@ services:
       context: backend
       dockerfile: Dockerfile
     ports:
-      - 3001:3001
+      - 4001:4001
     volumes:
       - ./backend:/backend
+  frontend: 
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    ports:
+      - 3001:3001
+    volumes:
+      - ./frontend:/frontend
+
