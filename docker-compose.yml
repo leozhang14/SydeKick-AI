@@ -7,3 +7,9 @@ services:
       - 4001:4001
     volumes:
       - ./backend:/backend
+  frontend:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    ports:
+      - 5173:5173
