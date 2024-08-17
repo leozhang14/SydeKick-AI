@@ -1,4 +1,4 @@
 flask==3.0.3
-Flask-CORS
+flask_cors
 psycopg2-binary
 flask_sqlalchemy
