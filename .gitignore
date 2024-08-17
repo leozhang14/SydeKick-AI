@@ -2,5 +2,5 @@ __pycache__
 *.pyc
 .env
 .venv
-./frontend/node_modules
-./backend/uploads
+/frontend/node_modules
+/backend/uploads

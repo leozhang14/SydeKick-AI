@@ -1,4 +1,5 @@
 flask==3.0.3
 flask_cors
+opencv-python
 psycopg2-binary
 flask_sqlalchemy
