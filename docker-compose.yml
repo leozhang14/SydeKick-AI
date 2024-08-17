@@ -3,13 +3,28 @@ services:
     build:
       context: backend
       dockerfile: Dockerfile
-    ports:
-      - 4001:4001
     volumes:
       - ./backend:/backend
+    env_file:
+      - ./backend/.env
+    depends_on:
+      - db
+    ports:
+      - 4001:4001
   frontend:
     build:
       context: frontend
       dockerfile: Dockerfile
+    depends_on:
+      - db
     ports:
       - 5173:5173
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
