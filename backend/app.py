@@ -58,7 +58,7 @@ def upload_video():
 
     return jsonify({"message": "Video uploaded successfully!"}), 201
 
-def extract_frames(video_path, output_folder, frame_rate=15):
+def extract_frames(video_path, output_folder, frame_rate=24):
     # Open the video file
     cap = cv2.VideoCapture(video_path)
     fps = cap.get(cv2.CAP_PROP_FPS)
