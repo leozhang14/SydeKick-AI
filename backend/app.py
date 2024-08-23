@@ -90,22 +90,22 @@ def login():
 # Home page route
 @app.route('/home')
 def home():
-    return "Galpao Da Luta"
+    return "Galpao Da Luta + Fighting Nerds"
 
 # About page route
 @app.route('/about')
 def about():
-    return "21-3, 6'3, 241, Bahia, Salvador, Brazil, #7 HW Contender, Jailton \"Malhadinho\" Almeida"
+    return "21-3, 6'3, 241, Bahia, Salvador, Brazil, #6 HW Contender, Jailton \"Malhadinho\" Almeida"
 
 # Contact page route
 @app.route('/contact')
 def contact():
-    return "#FakhretdinovAndNew"
+    return "#FakhretdinovAndNewInshallah"
 
 # Another page route
 @app.route('/services')
 def services():
-    return "BIGI BOY!"
+    return "ShamilIsKing"
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=4001)
