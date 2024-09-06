@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <div>
-        <h1>Welcome to Galpao Da Luta!</h1>
+        <h1>Welcome to SydeKick AI!</h1>
       </div>
       <ChakraProvider>
         <UploadForm/>
