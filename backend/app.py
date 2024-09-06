@@ -24,6 +24,10 @@ class VideoUpload(db.Model):
     video_path = db.Column(db.Text, nullable=False)
     uploaded_at = db.Column(db.DateTime, default=db.func.current_timestamp())
 
+@app.route('/')
+def login():
+    return "Log In Page"
+
 @app.route('/upload', methods=['POST'])
 def upload_video():
     user_name = request.form['user_name']
@@ -82,30 +86,6 @@ def extract_frames(video_path, output_folder, frame_rate=24):
         count += 1
 
     cap.release()
-
-@app.route('/')
-def login():
-    return "Log In Page"
-
-# Home page route
-@app.route('/home')
-def home():
-    return "Galpao Da Luta + Fighting Nerds"
-
-# About page route
-@app.route('/about')
-def about():
-    return "21-3, 6'3, 241, Bahia, Salvador, Brazil, #6 HW Contender, Jailton \"Malhadinho\" Almeida"
-
-# Contact page route
-@app.route('/contact')
-def contact():
-    return "#FakhretdinovAndNewInshallah"
-
-# Another page route
-@app.route('/services')
-def services():
-    return "ShamilIsKing"
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=4001)
