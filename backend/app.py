@@ -26,7 +26,7 @@ class VideoUpload(db.Model):
 
 @app.route('/')
 def login():
-    return "Hello!"
+    return "Hello Leo!"
 
 @app.route('/upload', methods=['POST'])
 def upload_video():
