@@ -6,3 +6,5 @@ venv
 uploads
 node_modules
 sample
+.DS_Store
+predictions.csv
