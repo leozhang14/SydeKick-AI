@@ -8,3 +8,4 @@ node_modules
 sample
 .DS_Store
 predictions.csv
+model/stream.csv
